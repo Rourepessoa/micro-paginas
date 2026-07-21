@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrar — MicroPáginas</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="brand">MicroPáginas</a>
+    <a href="/register.html" class="btn secondary">Criar conta</a>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h1>Entrar</h1>
+      <p class="subtitle">Acesse seu painel para editar sua página.</p>
+
+      <div id="alert-box"></div>
+
+      <form id="login-form" novalidate>
+        <label for="emailOrUsername">Email ou usuário</label>
+        <input type="text" id="emailOrUsername" name="emailOrUsername" autocomplete="username" required />
+
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" autocomplete="current-password" required />
+
+        <div class="form-actions">
+          <button type="submit" class="full-width" id="submit-btn">Entrar</button>
+        </div>
+      </form>
+
+      <p class="muted mt-16">
+        Ainda não tem conta? <a href="/register.html">Criar conta</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/login.js"></script>
+</body>
+</html>
