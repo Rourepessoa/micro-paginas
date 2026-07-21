@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criar conta — MicroPáginas</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="/" class="brand">MicroPáginas</a>
+    <a href="/login.html" class="btn secondary">Entrar</a>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h1>Criar sua conta</h1>
+      <p class="subtitle">Leva menos de um minuto.</p>
+
+      <div id="alert-box"></div>
+
+      <form id="register-form" novalidate>
+        <label for="username">Nome de usuário (vai virar sua URL)</label>
+        <input type="text" id="username" name="username" placeholder="seunome" autocomplete="username" required />
+        <p class="muted" id="username-hint">Sua página ficará em: <code id="url-preview">/u/seunome</code></p>
+
+        <label for="displayName">Nome de exibição</label>
+        <input type="text" id="displayName" name="displayName" placeholder="Seu Nome" autocomplete="name" />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="voce@email.com" autocomplete="email" required />
+
+        <label for="password">Senha</label>
+        <input type="password" id="password" name="password" placeholder="Mínimo 8 caracteres" autocomplete="new-password" required minlength="8" />
+
+        <div class="form-actions">
+          <button type="submit" class="full-width" id="submit-btn">Criar conta</button>
+        </div>
+      </form>
+
+      <p class="muted mt-16">
+        Já tem conta? <a href="/login.html">Entrar</a>
+      </p>
+    </div>
+  </div>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/register.js"></script>
+</body>
+</html>
