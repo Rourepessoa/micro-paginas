@@ -13,6 +13,10 @@ function getTransporter() {
     // que fazem inspeção de tráfego de email — 587 é mais confiável.
     secure: port === 465,
     requireTLS: port !== 465,
+    // Alguns hosts (ex: containers do Render) resolvem smtp.gmail.com para
+    // um endereço IPv6 mas não têm saída IPv6, causando ENETUNREACH.
+    // Forçar IPv4 evita isso.
+    family: 4,
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS,
